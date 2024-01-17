@@ -1,17 +1,29 @@
-name: CI
+name: Build & Test
 
-on: [push, pull_request]
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
 
 jobs:
   check-astro:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - name: checks
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: 18.14.1
-          cache: "npm"
-      - run: npm install
-      - run: npm run check
+          version: 8
+          run_install: false
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "pnpm"
+
+      - run: pnpm install
+      - run: pnpm all
