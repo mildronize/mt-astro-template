@@ -1,5 +1,4 @@
 import visit from 'unist-util-visit'; // Downgrade to v2.0.3 for supporting common js
-import type { Data } from 'mdast';
 // For ESM remark, please use Root from `mdast` instead
 // import type { Root } from 'mdast';
 /**
