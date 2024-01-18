@@ -3,6 +3,8 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import formatDate from "@/utils/formatDate";
 
+import "@/styles/prism-template.css";
+
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
 
