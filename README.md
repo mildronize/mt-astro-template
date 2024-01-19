@@ -8,7 +8,7 @@
 
 ## Original Project
 
-The original version of this project can be found at [MaeWolff/astro-portfolio-template](https://github.com/MaeWolff/astro-portfolio-template). Full credit for the initial development goes to [Maxence WOLFF](https://github.com/MaeWolff).
+The original version of this project can be found at [astro-portfolio-template](https://github.com/MaeWolff/astro-portfolio-template). Full credit for the initial development goes to [Maxence WOLFF](https://github.com/MaeWolff).
 
 ## License
 
@@ -16,5 +16,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Grateful acknowledgment to [Maxence WOLFF](https://github.com/MaeWolff) for the initial work on [MaeWolff/astro-portfolio-template](https://github.com/MaeWolff/astro-portfolio-template).
+- Grateful acknowledgment to [Maxence WOLFF](https://github.com/MaeWolff) for the initial work on [astro-portfolio-template](https://github.com/MaeWolff/astro-portfolio-template).
 

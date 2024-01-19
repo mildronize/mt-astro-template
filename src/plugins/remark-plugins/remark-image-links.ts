@@ -36,7 +36,6 @@ export default function remarkImageLink(options: IRemarkImageLinkOption) {
       getFirstHistory(file)
     );
 
-    console.log('node-env', process.env.NODE_ENV);
     visit<ImageNode>(tree, 'image', node => {
       // console.log(`[remark-image-links] processing node: ${JSON.stringify(node, null, 2)}`);
       // console.log(`[remark-image-links] processing file: ${getFirstHistory(file)}`);
