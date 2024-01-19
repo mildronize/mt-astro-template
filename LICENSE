@@ -19,3 +19,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+Modifications Copyright (c) 2024 Thada Wangthammang
+
+This project includes substantial modifications and additional features made by Thada Wangthammang in 2024. The enhancements include ability to add image markdown file in relative path.
+
+These modifications are also shared under the MIT License, adhering to the same terms and conditions as stated above.
+
+
