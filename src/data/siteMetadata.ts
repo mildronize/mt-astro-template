@@ -13,7 +13,7 @@ export const siteMetadata: ISiteMetadata = {
     footer: {
       sinceYear: 2015,
       copyright: 'thadaw.com',
-      tagline: '<a href="https://github.com/mildronize/blog-next" target="_blank">v6.0.0</a> Built with ❤️ by Thada Wangthammang'
+      tagline: '<a href="https://github.com/mildronize/mt-astro-template" target="_blank">MT ASTRO v7.0.0</a> Built with ❤️ by Thada Wangthammang'
     },
   },
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
@@ -66,24 +66,24 @@ export interface ISiteMetadata {
   tmpPath: string;
   siteUrl: string;
   components: {
-    hero: IHero;
-    footer: IFooter;
+    hero: Hero;
+    footer: Footer;
   };
-  userLinks: IUserLink[];
+  userLinks: UserLink[];
 }
 
-export interface IHero {
+export interface Hero {
   title: string;
   tagline: string;
 }
 
-export interface IUserLink {
+export interface UserLink {
   label: string;
   url: string;
   iconClassName: string;
 }
 
-export interface IFooter {
+export interface Footer {
   sinceYear: number;
   copyright: string;
   tagline: string;
