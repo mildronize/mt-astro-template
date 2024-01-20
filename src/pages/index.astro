@@ -1,18 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import { Image } from 'astro:assets';
-
 import Layout from '@/layouts/Layout.astro';
-import SocialLinks from '@/components/SocialLinks.astro';
-import PostCard from '@/components/PostCard.astro';
-import ProjectCard from '@/components/ProjectCard.astro';
-import Link from '@/components/shared/Link.astro';
-import convertAsteriskToStrongTag from '@/utils/convertAsteriskToStrongTag';
-
-import projects from '@/data/projects';
 import Container from '@/layouts/Container.astro';
 import PostListByYear from '@/components/PostListByYear.astro';
 import Footer from '@/layouts/Footer.astro';
+import Hero from '@/components/Hero.astro';
+import { siteMetadata } from '@/data/siteMetadata';
+const { tagline, title } = siteMetadata.components.hero;
 
 const posts = (await getCollection('posts')).sort(function (first, second) {
   return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
@@ -21,10 +15,9 @@ const posts = (await getCollection('posts')).sort(function (first, second) {
 
 <Layout>
   <Container>
+    <Hero title={title} tagline={tagline} userLinks={siteMetadata.userLinks} />
 
-    <h2 class="mb-8 text-md font-bold font-heading dark:text-white">
-      Recent Posts
-    </h2>
+    <h2 class="mb-8 text-md font-bold font-heading dark:text-white">Recent Posts</h2>
     <PostListByYear posts={posts} />
 
     <Footer />
