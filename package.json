@@ -43,5 +43,8 @@
     "recursive-copy": "^2.0.14",
     "tsx": "^4.7.0",
     "vitest": "^1.2.0"
+  },
+  "engines": {
+    "node": "20.4"
   }
 }
