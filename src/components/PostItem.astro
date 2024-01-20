@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { format, formatISO,  } from 'date-fns';
+import { format, formatISO } from 'date-fns';
+import DateFormatter from './DateFormatter.astro';
 
 export type Props = {
   post: CollectionEntry<'posts'>;
@@ -8,14 +9,14 @@ export type Props = {
 
 const { post } = Astro.props;
 ---
-<div class="flex-row flex  justify-between flex-nowrap">
+
+<div class="flex-row flex justify-between flex-nowrap">
   <h3 class="font-thai text-lg mb-8 sm:mb-5 pr-8 leading-snug font-normal dark:text-white">
     <a href={`/posts/${post.slug}`} class="dark:hover:text-blue-300 hover:text-blue-800">
       {post.data.title}
     </a>
   </h3>
   <div class="text-sm mb-4 min-w-fit text-gray-500 dark:text-gray-400 font-bold">
-    <!-- <DateFormatter dateString={date} format="MM-dd" /> -->
-    <time datetime={formatISO(post.data.publishedAt)}>{format(post.data.publishedAt, 'MM-dd')}</time>
+    <DateFormatter date={post.data.publishedAt} format="MM-dd" />
   </div>
 </div>
