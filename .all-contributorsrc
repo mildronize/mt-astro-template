@@ -33,12 +33,22 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "mildronize",
+      "name": "mildronize",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3647850?v=4",
+      "profile": "https://thadaw.com",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
   "skipCi": true,
   "repoType": "github",
   "repoHost": "https://github.com",
-  "projectName": "astro-portfolio-template",
-  "projectOwner": "MaeWolff"
+  "projectName": "mt-astro-template",
+  "projectOwner": "mildronize"
 }

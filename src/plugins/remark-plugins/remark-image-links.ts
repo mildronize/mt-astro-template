@@ -6,11 +6,7 @@ import path from 'path';
 import type { ImageNode, TreeNode } from './remark-types';
 import type { AstroFile } from '..';
 
-interface IRemarkImageLinkOption {
-  /**
-   * @deprecated
-   */
-  path?: string;
+export interface RemarkImageLinkOption {
   contentDirectory: string;
 }
 
@@ -28,7 +24,7 @@ export function getPostDirectory(prefixPath: string, contentPath: string = '') {
   return paths.join('/');
 }
 
-export default function remarkImageLink(options: IRemarkImageLinkOption) {
+export default function remarkImageLink(options: RemarkImageLinkOption) {
   return (tree: TreeNode, file: AstroFile) => {
 
     const _postDirectory = getPostDirectory(
@@ -36,7 +32,6 @@ export default function remarkImageLink(options: IRemarkImageLinkOption) {
       getFirstHistory(file)
     );
 
-    console.log('node-env', process.env.NODE_ENV);
     visit<ImageNode>(tree, 'image', node => {
       // console.log(`[remark-image-links] processing node: ${JSON.stringify(node, null, 2)}`);
       // console.log(`[remark-image-links] processing file: ${getFirstHistory(file)}`);
