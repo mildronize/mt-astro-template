@@ -1,5 +1,5 @@
 ---
-import { parseISO, format, isValid } from 'date-fns';
+import { format } from 'date-fns';
 import { type CollectionEntry } from 'astro:content';
 import PostList from './PostList.astro';
 
@@ -15,7 +15,7 @@ function getYearGroup(posts: CollectionEntry<'posts'>[]) {
 
 export type Props = {
   posts: CollectionEntry<'posts'>[];
-}
+};
 
 const { posts } = Astro.props;
 ---
@@ -23,7 +23,7 @@ const { posts } = Astro.props;
 <section>
   {
     getYearGroup(posts).map(year => (
-      <div >
+      <div>
         <h2 class="my-8 text-xl md:text-2xl font-bold tracking-tighter md:tracking-normal leading-tight font-thai dark:text-white">
           {year}
         </h2>
