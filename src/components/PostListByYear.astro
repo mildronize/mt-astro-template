@@ -24,7 +24,7 @@ const { posts } = Astro.props;
   {
     getYearGroup(posts).map(year => (
       <div >
-        <h2 class="my-8 text-xl md:text-2xl font-bold tracking-tighter md:tracking-normal leading-tight font-thai">
+        <h2 class="my-8 text-xl md:text-2xl font-bold tracking-tighter md:tracking-normal leading-tight font-thai dark:text-white">
           {year}
         </h2>
         <PostList posts={posts} year={year} />

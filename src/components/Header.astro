@@ -4,6 +4,7 @@ import presentation from "@/data/presentation";
 import Container from "@/layouts/Container.astro";
 import Logo from "@/layouts/Logo.astro";
 import Menu from "@/layouts/Menu.astro";
+import ThemeSwitch from "@/layouts/ThemeSwitch.astro";
 
 const pathname = removeTrailingSlash(Astro.url.pathname);
 ---
@@ -21,6 +22,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
           </svg>
         </Menu>
         <!-- <ThemeSwitch /> -->
+        <ThemeSwitch />
       </div>
     </div>
   </Container>
