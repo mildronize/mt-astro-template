@@ -15,6 +15,6 @@ export default defineConfig({
      * Refer to: https://docs.astro.build/en/guides/markdown-content/#markdown-plugins
      * Applied to .md and .mdx files
      */
-    remarkPlugins: [[remarkImageLink, { contentDirectory: siteMetadata.contentDirectory }]],
+    remarkPlugins: [[remarkImageLink, { contentDirectory: siteMetadata.content.contentDirectory }]],
   },
 });

@@ -1,7 +1,7 @@
 // const copy = require('recursive-copy');
 // const siteMetadata = require('../data/siteMetadata');
 
-import { contentDirectory } from '@/data/config';
+import { siteMetadata } from '@/data/siteMetadata';
 import copy from 'recursive-copy';
 
 const outDirectory = 'dist';
@@ -13,7 +13,7 @@ const option = {
 
 async function main() {
   try {
-    const results = await copy(contentDirectory, outDirectory, option);
+    const results = await copy(siteMetadata.content.contentDirectory, outDirectory, option);
     for(const result of results){
         console.info(`Copied "${result.dest}"`);
     }
